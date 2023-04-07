@@ -1,0 +1,303 @@
+{
+  "type": "object",
+  "properties": {
+    "colors": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "code": {
+              "type": "object",
+              "properties": {
+                "rgba": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                },
+                "hex": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "rgba",
+                "hex"
+              ]
+            }
+          },
+          "required": [
+            "color",
+            "category",
+            "type",
+            "code"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "code": {
+              "type": "object",
+              "properties": {
+                "rgba": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                },
+                "hex": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "rgba",
+                "hex"
+              ]
+            }
+          },
+          "required": [
+            "color",
+            "category",
+            "code"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "code": {
+              "type": "object",
+              "properties": {
+                "rgba": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                },
+                "hex": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "rgba",
+                "hex"
+              ]
+            }
+          },
+          "required": [
+            "color",
+            "category",
+            "type",
+            "code"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "code": {
+              "type": "object",
+              "properties": {
+                "rgba": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                },
+                "hex": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "rgba",
+                "hex"
+              ]
+            }
+          },
+          "required": [
+            "color",
+            "category",
+            "type",
+            "code"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "code": {
+              "type": "object",
+              "properties": {
+                "rgba": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                },
+                "hex": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "rgba",
+                "hex"
+              ]
+            }
+          },
+          "required": [
+            "color",
+            "category",
+            "type",
+            "code"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "code": {
+              "type": "object",
+              "properties": {
+                "rgba": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                },
+                "hex": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "rgba",
+                "hex"
+              ]
+            }
+          },
+          "required": [
+            "color",
+            "category",
+            "type",
+            "code"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "colors"
+  ]
+}

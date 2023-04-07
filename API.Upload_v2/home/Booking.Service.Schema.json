@@ -1,0 +1,624 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "mp_id": {
+          "type": "string"
+        },
+        "mp_name": {
+          "type": "string"
+        },
+        "sites": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "mp_id",
+        "mp_name",
+        "sites"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "mp_id": {
+          "type": "string"
+        },
+        "mp_name": {
+          "type": "string"
+        },
+        "sites": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "mp_id",
+        "mp_name",
+        "sites"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "mp_id": {
+          "type": "string"
+        },
+        "mp_name": {
+          "type": "string"
+        },
+        "sites": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "mp_id",
+        "mp_name",
+        "sites"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "mp_id": {
+          "type": "string"
+        },
+        "mp_name": {
+          "type": "string"
+        },
+        "sites": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "mp_id",
+        "mp_name",
+        "sites"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "mp_id": {
+          "type": "string"
+        },
+        "mp_name": {
+          "type": "string"
+        },
+        "sites": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "mp_id",
+        "mp_name",
+        "sites"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "mp_id": {
+          "type": "string"
+        },
+        "mp_name": {
+          "type": "string"
+        },
+        "sites": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "mp_id",
+        "mp_name",
+        "sites"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "mp_id": {
+          "type": "string"
+        },
+        "mp_name": {
+          "type": "string"
+        },
+        "sites": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "mp_id",
+        "mp_name",
+        "sites"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "mp_id": {
+          "type": "string"
+        },
+        "mp_name": {
+          "type": "string"
+        },
+        "sites": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "site_id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "site_id",
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "mp_id",
+        "mp_name",
+        "sites"
+      ]
+    }
+  ]
+}

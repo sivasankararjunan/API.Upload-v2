@@ -1,0 +1,171 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://example.com/object1635158304.json",
+	"title": "Root",
+	"type": "object",
+	"required": [
+		"data",
+		"actuality"
+	],
+	"properties": {
+		"data": {
+			"$id": "#root/data",
+			"title": "Data",
+			"type": "array",
+			"default": [],
+			"items": {
+				"$id": "#root/data/items",
+				"title": "Items",
+				"type": "object",
+				"required": [
+					"month_name",
+					"amount_in_local_currency",
+					"main_account",
+					"year",
+					"amount_in_eur",
+					"domain",
+					"month_number",
+					"weight",
+					"cost_centre_id",
+					"legal_entity",
+					"business_unit",
+					"local_currency"
+				],
+				"properties": {
+					"month_name": {
+						"$id": "#root/data/items/month_name",
+						"title": "Month_name",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"August"
+						],
+						"pattern": "^.*$"
+					},
+					"amount_in_local_currency": {
+						"$id": "#root/data/items/amount_in_local_currency",
+						"title": "Amount_in_local_currency",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"970.363333333333"
+						],
+						"pattern": "^.*$"
+					},
+					"main_account": {
+						"$id": "#root/data/items/main_account",
+						"title": "Main_account",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"7821"
+						],
+						"pattern": "^.*$"
+					},
+					"year": {
+						"$id": "#root/data/items/year",
+						"title": "Year",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2021"
+						],
+						"pattern": "^.*$"
+					},
+					"amount_in_eur": {
+						"$id": "#root/data/items/amount_in_eur",
+						"title": "Amount_in_eur",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"970.363333333333"
+						],
+						"pattern": "^.*$"
+					},
+					"domain": {
+						"$id": "#root/data/items/domain",
+						"title": "Domain",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Other"
+						],
+						"pattern": "^.*$"
+					},
+					"month_number": {
+						"$id": "#root/data/items/month_number",
+						"title": "Month_number",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"8"
+						],
+						"pattern": "^.*$"
+					},
+					"weight": {
+						"$id": "#root/data/items/weight",
+						"title": "Weight",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"-1.0"
+						],
+						"pattern": "^.*$"
+					},
+					"cost_centre_id": {
+						"$id": "#root/data/items/cost_centre_id",
+						"title": "Cost_centre_id",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"CC1504"
+						],
+						"pattern": "^.*$"
+					},
+					"legal_entity": {
+						"$id": "#root/data/items/legal_entity",
+						"title": "Legal_entity",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"7569"
+						],
+						"pattern": "^.*$"
+					},
+					"business_unit": {
+						"$id": "#root/data/items/business_unit",
+						"title": "Business_unit",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"SCH052"
+						],
+						"pattern": "^.*$"
+					},
+					"local_currency": {
+						"$id": "#root/data/items/local_currency",
+						"title": "Local_currency",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"EUR"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		},
+		"actuality": {
+			"$id": "#root/actuality",
+			"title": "Actuality",
+			"type": "string",
+			"default": "",
+			"examples": [
+				"E0"
+			],
+			"pattern": "^.*$"
+		}
+	}
+}

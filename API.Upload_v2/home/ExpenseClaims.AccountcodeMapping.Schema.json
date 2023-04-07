@@ -1,0 +1,2438 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for my JSON file format",
+
+  "type": "object",
+
+  "properties": {
+    "SE": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        }
+      ]
+    },
+    "Default": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accountCode": {
+              "type": "string"
+            },
+            "mainAccount": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accountCode",
+            "mainAccount"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+   
+    "Default"
+  ]
+}

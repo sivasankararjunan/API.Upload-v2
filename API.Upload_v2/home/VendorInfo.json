@@ -1,0 +1,77 @@
+{
+  "Vendor": [
+    {
+      "client": "ICP_test",
+      "appID": "a2a199d174e9",
+      "filenamestructure": "test_YYYY-MM-DD-MMSS.csv",
+      "storagefoldername": "test csv",
+      "schemaname": ""
+    },
+    {
+      "client": "ICP_test",
+      "appID": "b934a1953262",
+      "filenamestructure": "test_YYYY-MM-DD-MMSS.json",
+      "storagefoldername": "test json",
+      "schemaname": "ICPtest.Schema.json"
+    },
+    {
+      "client": "Internal teams",
+      "appID": "c04453a5c7ed",
+      "filenamestructure": "sites_mapping.json",
+      "storagefoldername": "configs/Booking service",
+      "schemaname": "Booking.Service.Schema.json"
+    },
+    {
+      "client": "Internal teams",
+      "appID": "c1e1492b8e4d",
+      "filenamestructure": "AccountCodeMapping.json",
+      "storagefoldername": "",
+      "containerName": "tecmappingfiles",
+      "schemaname": "ExpenseClaims.AccountcodeMapping.Schema.json"
+    },
+    {
+      "client": "Internal teams",
+      "appID": "c7377f4cbad8",
+      "filenamestructure": "VATMapping.json",
+      "storagefoldername": "",
+      "containerName": "tecmappingfiles",
+      "schemaname": "ExpenseClaims.VATmapping.Schema.json"
+    },
+    {
+      "client": "Quantum",
+      "appID": "ec1c2c831a0a",
+      "filenamestructure": "country_YYYY-MM-DD.txt",
+      "storagefoldername": "Quantum cashpool",
+      "schemaname": ""
+    },
+    {
+      "client": "Jedox",
+      "appID": "e1c6fe087294",
+      "filenamestructure": "FY_YYYY_Budget.json",
+      "storagefoldername": "Jedox Budgeting",
+      "schemaname": "Jedox.Budget.Schema.json"
+    },
+    {
+      "client": "Jedox",
+      "appID": "e1c6fe087294",
+      "filenamestructure": "FY_YYYY_Estimate_0.json",
+      "storagefoldername": "Jedox Budgeting",
+      "schemaname": "Jedox.Estimate.Schema.json"
+    },
+    {
+      "client": "Jedox",
+      "appID": "e1c6fe087294",
+      "filenamestructure": "FY_YYYY_Estimate_1.json",
+      "storagefoldername": "Jedox Budgeting",
+      "schemaname": "Jedox.Estimate.Schema.json"
+    },
+    {
+      "client": "Jedox",
+      "appID": "e1c6fe087294",
+      "filenamestructure": "FY_YYYY_Estimate_2.json",
+      "storagefoldername": "Jedox Budgeting",
+      "schemaname": "Jedox.Estimate.Schema.json"
+    }
+
+  ]
+}

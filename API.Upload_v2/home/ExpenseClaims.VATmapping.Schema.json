@@ -1,0 +1,342 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for my JSON file format",
+
+  "type": "object",
+
+  "properties": {
+    "DoNotHandleVAT": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "SE": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        }
+      ]
+    },
+    "GB": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        }
+      ]
+    },
+    "UK": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        }
+      ]
+    },
+    "NL": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        }
+      ]
+    },
+    "Default": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "VATCode": {
+              "type": "string"
+            },
+            "SalesTaxGroup": {
+              "type": "string"
+            },
+            "ItemSalesTaxGroup": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "VATCode",
+            "SalesTaxGroup",
+            "ItemSalesTaxGroup"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "DoNotHandleVAT",
+    
+    "Default"
+  ]
+}
