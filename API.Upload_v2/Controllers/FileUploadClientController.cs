@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -107,11 +108,17 @@ namespace FileUploadService.Controllers
             Description = "Upload an application-specific file to Ingka Centres")]
         public async Task<IActionResult> processDataAsync([FromRoute, SwaggerParameter("The ID of the application uploading the file.", Required = true)] string appID,
             [FromQuery, SwaggerParameter("The file metadata, used in the data processing logic.")] string metaData,
-            [FromBody, SwaggerParameter("data")] string data)
+            [FromBody, SwaggerRequestBody("data")] object data)
         {
-
-            await _fileUploadService.UploadFile(CancellationToken.None);
-            return Ok();
+            try
+            {
+                await _fileUploadService.UploadFile(appID, data, metaData,CancellationToken.None);
+                return Ok();
+            }
+            catch (BadHttpRequestException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
     }
