@@ -19,7 +19,7 @@
       "client": "Internal teams",
       "appID": "c04453a5c7ed",
       "filenamestructure": "sites_mapping.json",
-      "containerName": "Booking-service",
+      "containerName": "booking-service",
       "schemaname": "Booking.Service.Schema.json"
     },
     {
