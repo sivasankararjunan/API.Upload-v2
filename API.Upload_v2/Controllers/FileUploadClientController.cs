@@ -17,6 +17,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace FileUploadService.Controllers
 {
@@ -76,12 +77,40 @@ namespace FileUploadService.Controllers
         public async Task<IActionResult> ProcessFileAsync([FromRoute, SwaggerParameter("The ID of the application uploading the file.", Required = true)] string appID,
                         [FromQuery, SwaggerParameter("The file metadata, used in the data processing logic.")] string metaData)
         {
-            _logger.Log(LogLevel.Information, "ProcessFileAsync started");
-            if (!Request.Form.Files.Any())
+            try
             {
-                return BadRequest("No file content.");
+                _logger.Log(LogLevel.Information, "ProcessFileAsync started");
+                var data = ReadFile();
+                await _fileUploadService.UploadFile(appID, data, metaData, CancellationToken.None);
+
+                return Ok();
             }
-            return Ok();
+            catch (BadHttpRequestException ex)
+            {
+                _logger.LogError(ex.Message);
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, "Upload failed");
+            }
+        }
+
+        private object ReadFile()
+        {
+            if (Request.Form.Files == null || !Request.Form.Files.Any())
+            {
+                throw new BadHttpRequestException("No file content.");
+            }
+
+            using (var stream = Request.Form.Files.First().OpenReadStream())
+            {
+                using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+                {
+                    return reader.ReadToEnd();
+                }
+            }
         }
 
 
@@ -112,12 +141,16 @@ namespace FileUploadService.Controllers
         {
             try
             {
-                await _fileUploadService.UploadFile(appID, data, metaData,CancellationToken.None);
+                await _fileUploadService.UploadFile(appID, data, metaData, CancellationToken.None);
                 return Ok();
             }
             catch (BadHttpRequestException ex)
             {
                 return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Upload failed");
             }
         }
 
