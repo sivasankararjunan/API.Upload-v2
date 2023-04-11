@@ -1,0 +1,2239 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "SE",
+    "Default"
+  ],
+  "properties": {
+    "SE": {
+      "type": "array",
+      "default": [],
+      "title": "The SE Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "accountCode",
+          "mainAccount"
+        ],
+        "properties": {
+          "accountCode": {
+            "type": "string",
+            "title": "The accountCode Schema",
+            "examples": [
+              "FAKESE5821",
+              "FAKESE6982",
+              "RECTAXEXPENSE",
+              "OVERAOL",
+              "OVERAOLFRGN"
+            ]
+          },
+          "mainAccount": {
+            "type": "string",
+            "title": "The mainAccount Schema",
+            "examples": [
+              "5821",
+              "6982",
+              "2829",
+              "7321",
+              "7323"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "accountCode": "FAKESE5821",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "FAKESE6982",
+            "mainAccount": "6982"
+          },
+          {
+            "accountCode": "RECTAXEXPENSE",
+            "mainAccount": "2829"
+          },
+          {
+            "accountCode": "OVERAOL",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "OVERAOLFRGN",
+            "mainAccount": "7323"
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "accountCode": "FAKESE5821",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "FAKESE6982",
+            "mainAccount": "6982"
+          },
+          {
+            "accountCode": "RECTAXEXPENSE",
+            "mainAccount": "2829"
+          },
+          {
+            "accountCode": "OVERAOL",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "OVERAOLFRGN",
+            "mainAccount": "7323"
+          }
+        ]
+      ]
+    },
+    "Default": {
+      "type": "array",
+      "default": [],
+      "title": "The Default Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "accountCode",
+          "mainAccount"
+        ],
+        "properties": {
+          "accountCode": {
+            "type": "string",
+            "title": "The accountCode Schema",
+            "examples": [
+              "AIRBAG",
+              "AIRDOM",
+              "AIRFAM",
+              "AIRFARE",
+              "AIRHOME",
+              "AIRINT",
+              "AIRREP",
+              "ALLOWOL",
+              "ATMCASH",
+              "ATMFEE",
+              "BANKFEE",
+              "BECARFU",
+              "BEHYBOL",
+              "BEHYBR",
+              "BENDIE",
+              "BENDIOL",
+              "BREAKFA",
+              "CARREN",
+              "CASHADV",
+              "CCFEE",
+              "COMCAR",
+              "DAPJALL",
+              "DAYALLO",
+              "DAYALOL",
+              "EXCHAN",
+              "FUELCC",
+              "FUELCD",
+              "FUELCG",
+              "FUELDCC",
+              "FUELDPC",
+              "FUELDRC",
+              "FUELPC",
+              "FUELRC",
+              "FUELRD",
+              "FUELRG",
+              "FUELST",
+              "GIFTINT",
+              "GST",
+              "HOMEEMP",
+              "HOMEFAM",
+              "HOMETAX",
+              "HOMTRIP",
+              "HOTEL",
+              "HST",
+              "IREPDED",
+              "IREPNOD",
+              "LAUNDRY",
+              "LUGGALL",
+              "MEALS",
+              "METRO",
+              "MILLEAS",
+              "MILPEOL",
+              "MILPERS",
+              "MILPNOT",
+              "MIPERIN",
+              "NIGHALL",
+              "NORCOM",
+              "NORCOM2",
+              "NORKMHO",
+              "OTHERTR",
+              "OVERALL",
+              "PARKING",
+              "PASSENG",
+              "PUBTRAN",
+              "QST",
+              "RENTCAR",
+              "REP",
+              "REPDED",
+              "REPDK",
+              "REPDOM",
+              "REPFOR",
+              "REPNOND",
+              "REPOTHE",
+              "RESPUR",
+              "RUALC",
+              "TAXI",
+              "TOLLS",
+              "TRAOTH",
+              "VARPOOL",
+              "VISA",
+              "VISATE",
+              "ZZAIR",
+              "DAYALLOHOME",
+              "DAYALLOFRGN",
+              "REC",
+              "STAFEDU",
+              "PERSON",
+              "ADMCOST",
+              "BECARMA",
+              "BOOKS",
+              "BUSIMET",
+              "CARBEN",
+              "CARMAIN",
+              "CLOTHES",
+              "COMCOM",
+              "COMCON",
+              "COMMIN",
+              "COMMMAT",
+              "COMPUR",
+              "CONEQUI",
+              "CONMAT",
+              "CONSULT",
+              "DONISE",
+              "EDUEXT",
+              "EDUINT",
+              "FREESUB",
+              "GIFT",
+              "GIFTEX",
+              "HEACAR",
+              "HOMLEAV",
+              "HOUSUB",
+              "INSTALL",
+              "INTERNE",
+              "ITSOFT",
+              "ITVARIA",
+              "LEGAL",
+              "LOWVALU",
+              "MAGIZIN",
+              "MEDEXP",
+              "MEMBFEE",
+              "MOBILE",
+              "MOBPACK",
+              "OFFADM",
+              "OFFREP",
+              "OFFSUP",
+              "OTCOST",
+              "OTHEBEN",
+              "OTHERCC",
+              "OTHERMC",
+              "OTHEROP",
+              "OTHERPC",
+              "OTHERPE",
+              "OTHPS",
+              "OTHREMA",
+              "OTHSER",
+              "PHONE",
+              "POSTAGE",
+              "RECRUIT",
+              "REFROG",
+              "RELOC",
+              "RESPEM",
+              "SAMPLES",
+              "STAFCAT",
+              "STAFDEV",
+              "STAFFEN",
+              "STAFMET",
+              "STOREA",
+              "TBEVNTS",
+              "TBMEALS",
+              "TELTRVL",
+              "TRAIALL",
+              "TSHORE",
+              "UTILI",
+              "WORKPL",
+              "ZZOTPRM",
+              "MISSINGCODE"
+            ]
+          },
+          "mainAccount": {
+            "type": "string",
+            "title": "The mainAccount Schema",
+            "examples": [
+              "5811",
+              "7399",
+              "7322",
+              "1611",
+              "6572",
+              "5899",
+              "7385",
+              "7331",
+              "5833",
+              "5821",
+              "5612",
+              "7321",
+              "7699",
+              "5831",
+              "7632",
+              "5812",
+              "6071",
+              "6072",
+              "7323",
+              "1622",
+              "7611",
+              "6499",
+              "6971",
+              "7999",
+              "7384",
+              "5954",
+              "5411",
+              "5461",
+              "6993",
+              "6551",
+              "6991",
+              "7631",
+              "5981",
+              "7621",
+              "7381",
+              "7692",
+              "6231",
+              "5421",
+              "6611",
+              "6581",
+              "6213",
+              "6111",
+              "5522",
+              "5611",
+              "5999",
+              "6599",
+              "5599",
+              "6211",
+              "6251",
+              "7691",
+              "5961",
+              "5994",
+              "5399",
+              "6951"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "accountCode": "AIRBAG",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "AIRDOM",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "AIRFAM",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "AIRFARE",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "AIRHOME",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "AIRINT",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "AIRREP",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "ALLOWOL",
+            "mainAccount": "7322"
+          },
+          {
+            "accountCode": "ATMCASH",
+            "mainAccount": "1611"
+          },
+          {
+            "accountCode": "ATMFEE",
+            "mainAccount": "6572"
+          },
+          {
+            "accountCode": "BANKFEE",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "BECARFU",
+            "mainAccount": "7385"
+          },
+          {
+            "accountCode": "BEHYBOL",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "BEHYBR",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "BENDIE",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "BENDIOL",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "BREAKFA",
+            "mainAccount": "5833"
+          },
+          {
+            "accountCode": "CARREN",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "CASHADV",
+            "mainAccount": "1611"
+          },
+          {
+            "accountCode": "CCFEE",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "COMCAR",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "DAPJALL",
+            "mainAccount": "7322"
+          },
+          {
+            "accountCode": "DAYALLO",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "DAYALOL",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "EXCHAN",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "FUELCC",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELCD",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELCG",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELDCC",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELDPC",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "FUELDRC",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELPC",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELRC",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "FUELRD",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "FUELRG",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "FUELST",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "GIFTINT",
+            "mainAccount": "7699"
+          },
+          {
+            "accountCode": "GST",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "HOMEEMP",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "HOMEFAM",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "HOMETAX",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "HOMTRIP",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "HOTEL",
+            "mainAccount": "5831"
+          },
+          {
+            "accountCode": "HST",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "IREPDED",
+            "mainAccount": "7699"
+          },
+          {
+            "accountCode": "IREPNOD",
+            "mainAccount": "7632"
+          },
+          {
+            "accountCode": "LAUNDRY",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "LUGGALL",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "MEALS",
+            "mainAccount": "5833"
+          },
+          {
+            "accountCode": "METRO",
+            "mainAccount": "5812"
+          },
+          {
+            "accountCode": "MILLEAS",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "MILPEOL",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "MILPERS",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "MILPNOT",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "MIPERIN",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "NIGHALL",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "NORCOM",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "NORCOM2",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "NORKMHO",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "OTHERTR",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "OVERALL",
+            "mainAccount": "5831"
+          },
+          {
+            "accountCode": "PARKING",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "PASSENG",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "PUBTRAN",
+            "mainAccount": "5812"
+          },
+          {
+            "accountCode": "QST",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "RENTCAR",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "REP",
+            "mainAccount": "6071"
+          },
+          {
+            "accountCode": "REPDED",
+            "mainAccount": "6072"
+          },
+          {
+            "accountCode": "REPDK",
+            "mainAccount": "6071"
+          },
+          {
+            "accountCode": "REPDOM",
+            "mainAccount": "6071"
+          },
+          {
+            "accountCode": "REPFOR",
+            "mainAccount": "6071"
+          },
+          {
+            "accountCode": "REPNOND",
+            "mainAccount": "6072"
+          },
+          {
+            "accountCode": "REPOTHE",
+            "mainAccount": "6072"
+          },
+          {
+            "accountCode": "RESPUR",
+            "mainAccount": "5833"
+          },
+          {
+            "accountCode": "RUALC",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "TAXI",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "TOLLS",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "TRAOTH",
+            "mainAccount": "5812"
+          },
+          {
+            "accountCode": "VARPOOL",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "VISA",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "VISATE",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "ZZAIR",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "DAYALLOHOME",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "DAYALLOFRGN",
+            "mainAccount": "7323"
+          },
+          {
+            "accountCode": "REC",
+            "mainAccount": "1622"
+          },
+          {
+            "accountCode": "STAFEDU",
+            "mainAccount": "7611"
+          },
+          {
+            "accountCode": "PERSON",
+            "mainAccount": "1622"
+          },
+          {
+            "accountCode": "ADMCOST",
+            "mainAccount": "6499"
+          },
+          {
+            "accountCode": "BECARMA",
+            "mainAccount": "7385"
+          },
+          {
+            "accountCode": "BOOKS",
+            "mainAccount": "6971"
+          },
+          {
+            "accountCode": "BUSIMET",
+            "mainAccount": "7999"
+          },
+          {
+            "accountCode": "CARBEN",
+            "mainAccount": "7385"
+          },
+          {
+            "accountCode": "CARMAIN",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "CLOTHES",
+            "mainAccount": "7384"
+          },
+          {
+            "accountCode": "COMCOM",
+            "mainAccount": "5954"
+          },
+          {
+            "accountCode": "COMCON",
+            "mainAccount": "5954"
+          },
+          {
+            "accountCode": "COMMIN",
+            "mainAccount": "5411"
+          },
+          {
+            "accountCode": "COMMMAT",
+            "mainAccount": "5461"
+          },
+          {
+            "accountCode": "COMPUR",
+            "mainAccount": "6993"
+          },
+          {
+            "accountCode": "CONEQUI",
+            "mainAccount": "5411"
+          },
+          {
+            "accountCode": "CONMAT",
+            "mainAccount": "5461"
+          },
+          {
+            "accountCode": "CONSULT",
+            "mainAccount": "6551"
+          },
+          {
+            "accountCode": "DONISE",
+            "mainAccount": "6991"
+          },
+          {
+            "accountCode": "EDUEXT",
+            "mainAccount": "7611"
+          },
+          {
+            "accountCode": "EDUINT",
+            "mainAccount": "7611"
+          },
+          {
+            "accountCode": "FREESUB",
+            "mainAccount": "7631"
+          },
+          {
+            "accountCode": "GIFT",
+            "mainAccount": "5981"
+          },
+          {
+            "accountCode": "GIFTEX",
+            "mainAccount": "6071"
+          },
+          {
+            "accountCode": "HEACAR",
+            "mainAccount": "7621"
+          },
+          {
+            "accountCode": "HOMLEAV",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "HOUSUB",
+            "mainAccount": "7381"
+          },
+          {
+            "accountCode": "INSTALL",
+            "mainAccount": "7692"
+          },
+          {
+            "accountCode": "INTERNE",
+            "mainAccount": "6231"
+          },
+          {
+            "accountCode": "ITSOFT",
+            "mainAccount": "5421"
+          },
+          {
+            "accountCode": "ITVARIA",
+            "mainAccount": "6611"
+          },
+          {
+            "accountCode": "LEGAL",
+            "mainAccount": "6581"
+          },
+          {
+            "accountCode": "LOWVALU",
+            "mainAccount": "5411"
+          },
+          {
+            "accountCode": "MAGIZIN",
+            "mainAccount": "6971"
+          },
+          {
+            "accountCode": "MEDEXP",
+            "mainAccount": "7621"
+          },
+          {
+            "accountCode": "MEMBFEE",
+            "mainAccount": "6971"
+          },
+          {
+            "accountCode": "MOBILE",
+            "mainAccount": "6213"
+          },
+          {
+            "accountCode": "MOBPACK",
+            "mainAccount": "7692"
+          },
+          {
+            "accountCode": "OFFADM",
+            "mainAccount": "6111"
+          },
+          {
+            "accountCode": "OFFREP",
+            "mainAccount": "5522"
+          },
+          {
+            "accountCode": "OFFSUP",
+            "mainAccount": "6111"
+          },
+          {
+            "accountCode": "OTCOST",
+            "mainAccount": "7699"
+          },
+          {
+            "accountCode": "OTHEBEN",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "OTHERCC",
+            "mainAccount": "5611"
+          },
+          {
+            "accountCode": "OTHERMC",
+            "mainAccount": "5999"
+          },
+          {
+            "accountCode": "OTHEROP",
+            "mainAccount": "7999"
+          },
+          {
+            "accountCode": "OTHERPC",
+            "mainAccount": "5611"
+          },
+          {
+            "accountCode": "OTHERPE",
+            "mainAccount": "7699"
+          },
+          {
+            "accountCode": "OTHPS",
+            "mainAccount": "6599"
+          },
+          {
+            "accountCode": "OTHREMA",
+            "mainAccount": "5599"
+          },
+          {
+            "accountCode": "OTHSER",
+            "mainAccount": "6599"
+          },
+          {
+            "accountCode": "PHONE",
+            "mainAccount": "6211"
+          },
+          {
+            "accountCode": "POSTAGE",
+            "mainAccount": "6251"
+          },
+          {
+            "accountCode": "RECRUIT",
+            "mainAccount": "7691"
+          },
+          {
+            "accountCode": "REFROG",
+            "mainAccount": "7631"
+          },
+          {
+            "accountCode": "RELOC",
+            "mainAccount": "7692"
+          },
+          {
+            "accountCode": "RESPEM",
+            "mainAccount": "7699"
+          },
+          {
+            "accountCode": "SAMPLES",
+            "mainAccount": "5961"
+          },
+          {
+            "accountCode": "STAFCAT",
+            "mainAccount": "7631"
+          },
+          {
+            "accountCode": "STAFDEV",
+            "mainAccount": "7611"
+          },
+          {
+            "accountCode": "STAFFEN",
+            "mainAccount": "7631"
+          },
+          {
+            "accountCode": "STAFMET",
+            "mainAccount": "7631"
+          },
+          {
+            "accountCode": "STOREA",
+            "mainAccount": "5994"
+          },
+          {
+            "accountCode": "TBEVNTS",
+            "mainAccount": "7632"
+          },
+          {
+            "accountCode": "TBMEALS",
+            "mainAccount": "7632"
+          },
+          {
+            "accountCode": "TELTRVL",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "TRAIALL",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "TSHORE",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "UTILI",
+            "mainAccount": "5399"
+          },
+          {
+            "accountCode": "WORKPL",
+            "mainAccount": "7384"
+          },
+          {
+            "accountCode": "ZZOTPRM",
+            "mainAccount": "6951"
+          },
+          {
+            "accountCode": "MISSINGCODE",
+            "mainAccount": "5899"
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "accountCode": "AIRBAG",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "AIRDOM",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "AIRFAM",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "AIRFARE",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "AIRHOME",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "AIRINT",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "AIRREP",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "ALLOWOL",
+            "mainAccount": "7322"
+          },
+          {
+            "accountCode": "ATMCASH",
+            "mainAccount": "1611"
+          },
+          {
+            "accountCode": "ATMFEE",
+            "mainAccount": "6572"
+          },
+          {
+            "accountCode": "BANKFEE",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "BECARFU",
+            "mainAccount": "7385"
+          },
+          {
+            "accountCode": "BEHYBOL",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "BEHYBR",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "BENDIE",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "BENDIOL",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "BREAKFA",
+            "mainAccount": "5833"
+          },
+          {
+            "accountCode": "CARREN",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "CASHADV",
+            "mainAccount": "1611"
+          },
+          {
+            "accountCode": "CCFEE",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "COMCAR",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "DAPJALL",
+            "mainAccount": "7322"
+          },
+          {
+            "accountCode": "DAYALLO",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "DAYALOL",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "EXCHAN",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "FUELCC",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELCD",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELCG",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELDCC",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELDPC",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "FUELDRC",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELPC",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "FUELRC",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "FUELRD",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "FUELRG",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "FUELST",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "GIFTINT",
+            "mainAccount": "7699"
+          },
+          {
+            "accountCode": "GST",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "HOMEEMP",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "HOMEFAM",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "HOMETAX",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "HOMTRIP",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "HOTEL",
+            "mainAccount": "5831"
+          },
+          {
+            "accountCode": "HST",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "IREPDED",
+            "mainAccount": "7699"
+          },
+          {
+            "accountCode": "IREPNOD",
+            "mainAccount": "7632"
+          },
+          {
+            "accountCode": "LAUNDRY",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "LUGGALL",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "MEALS",
+            "mainAccount": "5833"
+          },
+          {
+            "accountCode": "METRO",
+            "mainAccount": "5812"
+          },
+          {
+            "accountCode": "MILLEAS",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "MILPEOL",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "MILPERS",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "MILPNOT",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "MIPERIN",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "NIGHALL",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "NORCOM",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "NORCOM2",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "NORKMHO",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "OTHERTR",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "OVERALL",
+            "mainAccount": "5831"
+          },
+          {
+            "accountCode": "PARKING",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "PASSENG",
+            "mainAccount": "7331"
+          },
+          {
+            "accountCode": "PUBTRAN",
+            "mainAccount": "5812"
+          },
+          {
+            "accountCode": "QST",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "RENTCAR",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "REP",
+            "mainAccount": "6071"
+          },
+          {
+            "accountCode": "REPDED",
+            "mainAccount": "6072"
+          },
+          {
+            "accountCode": "REPDK",
+            "mainAccount": "6071"
+          },
+          {
+            "accountCode": "REPDOM",
+            "mainAccount": "6071"
+          },
+          {
+            "accountCode": "REPFOR",
+            "mainAccount": "6071"
+          },
+          {
+            "accountCode": "REPNOND",
+            "mainAccount": "6072"
+          },
+          {
+            "accountCode": "REPOTHE",
+            "mainAccount": "6072"
+          },
+          {
+            "accountCode": "RESPUR",
+            "mainAccount": "5833"
+          },
+          {
+            "accountCode": "RUALC",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "TAXI",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "TOLLS",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "TRAOTH",
+            "mainAccount": "5812"
+          },
+          {
+            "accountCode": "VARPOOL",
+            "mainAccount": "5821"
+          },
+          {
+            "accountCode": "VISA",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "VISATE",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "ZZAIR",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "DAYALLOHOME",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "DAYALLOFRGN",
+            "mainAccount": "7323"
+          },
+          {
+            "accountCode": "REC",
+            "mainAccount": "1622"
+          },
+          {
+            "accountCode": "STAFEDU",
+            "mainAccount": "7611"
+          },
+          {
+            "accountCode": "PERSON",
+            "mainAccount": "1622"
+          },
+          {
+            "accountCode": "ADMCOST",
+            "mainAccount": "6499"
+          },
+          {
+            "accountCode": "BECARMA",
+            "mainAccount": "7385"
+          },
+          {
+            "accountCode": "BOOKS",
+            "mainAccount": "6971"
+          },
+          {
+            "accountCode": "BUSIMET",
+            "mainAccount": "7999"
+          },
+          {
+            "accountCode": "CARBEN",
+            "mainAccount": "7385"
+          },
+          {
+            "accountCode": "CARMAIN",
+            "mainAccount": "5612"
+          },
+          {
+            "accountCode": "CLOTHES",
+            "mainAccount": "7384"
+          },
+          {
+            "accountCode": "COMCOM",
+            "mainAccount": "5954"
+          },
+          {
+            "accountCode": "COMCON",
+            "mainAccount": "5954"
+          },
+          {
+            "accountCode": "COMMIN",
+            "mainAccount": "5411"
+          },
+          {
+            "accountCode": "COMMMAT",
+            "mainAccount": "5461"
+          },
+          {
+            "accountCode": "COMPUR",
+            "mainAccount": "6993"
+          },
+          {
+            "accountCode": "CONEQUI",
+            "mainAccount": "5411"
+          },
+          {
+            "accountCode": "CONMAT",
+            "mainAccount": "5461"
+          },
+          {
+            "accountCode": "CONSULT",
+            "mainAccount": "6551"
+          },
+          {
+            "accountCode": "DONISE",
+            "mainAccount": "6991"
+          },
+          {
+            "accountCode": "EDUEXT",
+            "mainAccount": "7611"
+          },
+          {
+            "accountCode": "EDUINT",
+            "mainAccount": "7611"
+          },
+          {
+            "accountCode": "FREESUB",
+            "mainAccount": "7631"
+          },
+          {
+            "accountCode": "GIFT",
+            "mainAccount": "5981"
+          },
+          {
+            "accountCode": "GIFTEX",
+            "mainAccount": "6071"
+          },
+          {
+            "accountCode": "HEACAR",
+            "mainAccount": "7621"
+          },
+          {
+            "accountCode": "HOMLEAV",
+            "mainAccount": "5811"
+          },
+          {
+            "accountCode": "HOUSUB",
+            "mainAccount": "7381"
+          },
+          {
+            "accountCode": "INSTALL",
+            "mainAccount": "7692"
+          },
+          {
+            "accountCode": "INTERNE",
+            "mainAccount": "6231"
+          },
+          {
+            "accountCode": "ITSOFT",
+            "mainAccount": "5421"
+          },
+          {
+            "accountCode": "ITVARIA",
+            "mainAccount": "6611"
+          },
+          {
+            "accountCode": "LEGAL",
+            "mainAccount": "6581"
+          },
+          {
+            "accountCode": "LOWVALU",
+            "mainAccount": "5411"
+          },
+          {
+            "accountCode": "MAGIZIN",
+            "mainAccount": "6971"
+          },
+          {
+            "accountCode": "MEDEXP",
+            "mainAccount": "7621"
+          },
+          {
+            "accountCode": "MEMBFEE",
+            "mainAccount": "6971"
+          },
+          {
+            "accountCode": "MOBILE",
+            "mainAccount": "6213"
+          },
+          {
+            "accountCode": "MOBPACK",
+            "mainAccount": "7692"
+          },
+          {
+            "accountCode": "OFFADM",
+            "mainAccount": "6111"
+          },
+          {
+            "accountCode": "OFFREP",
+            "mainAccount": "5522"
+          },
+          {
+            "accountCode": "OFFSUP",
+            "mainAccount": "6111"
+          },
+          {
+            "accountCode": "OTCOST",
+            "mainAccount": "7699"
+          },
+          {
+            "accountCode": "OTHEBEN",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "OTHERCC",
+            "mainAccount": "5611"
+          },
+          {
+            "accountCode": "OTHERMC",
+            "mainAccount": "5999"
+          },
+          {
+            "accountCode": "OTHEROP",
+            "mainAccount": "7999"
+          },
+          {
+            "accountCode": "OTHERPC",
+            "mainAccount": "5611"
+          },
+          {
+            "accountCode": "OTHERPE",
+            "mainAccount": "7699"
+          },
+          {
+            "accountCode": "OTHPS",
+            "mainAccount": "6599"
+          },
+          {
+            "accountCode": "OTHREMA",
+            "mainAccount": "5599"
+          },
+          {
+            "accountCode": "OTHSER",
+            "mainAccount": "6599"
+          },
+          {
+            "accountCode": "PHONE",
+            "mainAccount": "6211"
+          },
+          {
+            "accountCode": "POSTAGE",
+            "mainAccount": "6251"
+          },
+          {
+            "accountCode": "RECRUIT",
+            "mainAccount": "7691"
+          },
+          {
+            "accountCode": "REFROG",
+            "mainAccount": "7631"
+          },
+          {
+            "accountCode": "RELOC",
+            "mainAccount": "7692"
+          },
+          {
+            "accountCode": "RESPEM",
+            "mainAccount": "7699"
+          },
+          {
+            "accountCode": "SAMPLES",
+            "mainAccount": "5961"
+          },
+          {
+            "accountCode": "STAFCAT",
+            "mainAccount": "7631"
+          },
+          {
+            "accountCode": "STAFDEV",
+            "mainAccount": "7611"
+          },
+          {
+            "accountCode": "STAFFEN",
+            "mainAccount": "7631"
+          },
+          {
+            "accountCode": "STAFMET",
+            "mainAccount": "7631"
+          },
+          {
+            "accountCode": "STOREA",
+            "mainAccount": "5994"
+          },
+          {
+            "accountCode": "TBEVNTS",
+            "mainAccount": "7632"
+          },
+          {
+            "accountCode": "TBMEALS",
+            "mainAccount": "7632"
+          },
+          {
+            "accountCode": "TELTRVL",
+            "mainAccount": "5899"
+          },
+          {
+            "accountCode": "TRAIALL",
+            "mainAccount": "7321"
+          },
+          {
+            "accountCode": "TSHORE",
+            "mainAccount": "7399"
+          },
+          {
+            "accountCode": "UTILI",
+            "mainAccount": "5399"
+          },
+          {
+            "accountCode": "WORKPL",
+            "mainAccount": "7384"
+          },
+          {
+            "accountCode": "ZZOTPRM",
+            "mainAccount": "6951"
+          },
+          {
+            "accountCode": "MISSINGCODE",
+            "mainAccount": "5899"
+          }
+        ]
+      ]
+    }
+  },
+  "examples": [
+    {
+      "SE": [
+        {
+          "accountCode": "FAKESE5821",
+          "mainAccount": "5821"
+        },
+        {
+          "accountCode": "FAKESE6982",
+          "mainAccount": "6982"
+        },
+        {
+          "accountCode": "RECTAXEXPENSE",
+          "mainAccount": "2829"
+        },
+        {
+          "accountCode": "OVERAOL",
+          "mainAccount": "7321"
+        },
+        {
+          "accountCode": "OVERAOLFRGN",
+          "mainAccount": "7323"
+        }
+      ],
+      "Default": [
+        {
+          "accountCode": "AIRBAG",
+          "mainAccount": "5811"
+        },
+        {
+          "accountCode": "AIRDOM",
+          "mainAccount": "5811"
+        },
+        {
+          "accountCode": "AIRFAM",
+          "mainAccount": "7399"
+        },
+        {
+          "accountCode": "AIRFARE",
+          "mainAccount": "5811"
+        },
+        {
+          "accountCode": "AIRHOME",
+          "mainAccount": "7399"
+        },
+        {
+          "accountCode": "AIRINT",
+          "mainAccount": "5811"
+        },
+        {
+          "accountCode": "AIRREP",
+          "mainAccount": "7399"
+        },
+        {
+          "accountCode": "ALLOWOL",
+          "mainAccount": "7322"
+        },
+        {
+          "accountCode": "ATMCASH",
+          "mainAccount": "1611"
+        },
+        {
+          "accountCode": "ATMFEE",
+          "mainAccount": "6572"
+        },
+        {
+          "accountCode": "BANKFEE",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "BECARFU",
+          "mainAccount": "7385"
+        },
+        {
+          "accountCode": "BEHYBOL",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "BEHYBR",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "BENDIE",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "BENDIOL",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "BREAKFA",
+          "mainAccount": "5833"
+        },
+        {
+          "accountCode": "CARREN",
+          "mainAccount": "5821"
+        },
+        {
+          "accountCode": "CASHADV",
+          "mainAccount": "1611"
+        },
+        {
+          "accountCode": "CCFEE",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "COMCAR",
+          "mainAccount": "5612"
+        },
+        {
+          "accountCode": "DAPJALL",
+          "mainAccount": "7322"
+        },
+        {
+          "accountCode": "DAYALLO",
+          "mainAccount": "7321"
+        },
+        {
+          "accountCode": "DAYALOL",
+          "mainAccount": "7321"
+        },
+        {
+          "accountCode": "EXCHAN",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "FUELCC",
+          "mainAccount": "5612"
+        },
+        {
+          "accountCode": "FUELCD",
+          "mainAccount": "5612"
+        },
+        {
+          "accountCode": "FUELCG",
+          "mainAccount": "5612"
+        },
+        {
+          "accountCode": "FUELDCC",
+          "mainAccount": "5612"
+        },
+        {
+          "accountCode": "FUELDPC",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "FUELDRC",
+          "mainAccount": "5612"
+        },
+        {
+          "accountCode": "FUELPC",
+          "mainAccount": "5612"
+        },
+        {
+          "accountCode": "FUELRC",
+          "mainAccount": "5821"
+        },
+        {
+          "accountCode": "FUELRD",
+          "mainAccount": "5821"
+        },
+        {
+          "accountCode": "FUELRG",
+          "mainAccount": "5821"
+        },
+        {
+          "accountCode": "FUELST",
+          "mainAccount": "5612"
+        },
+        {
+          "accountCode": "GIFTINT",
+          "mainAccount": "7699"
+        },
+        {
+          "accountCode": "GST",
+          "mainAccount": "5811"
+        },
+        {
+          "accountCode": "HOMEEMP",
+          "mainAccount": "7399"
+        },
+        {
+          "accountCode": "HOMEFAM",
+          "mainAccount": "7399"
+        },
+        {
+          "accountCode": "HOMETAX",
+          "mainAccount": "7399"
+        },
+        {
+          "accountCode": "HOMTRIP",
+          "mainAccount": "7399"
+        },
+        {
+          "accountCode": "HOTEL",
+          "mainAccount": "5831"
+        },
+        {
+          "accountCode": "HST",
+          "mainAccount": "5811"
+        },
+        {
+          "accountCode": "IREPDED",
+          "mainAccount": "7699"
+        },
+        {
+          "accountCode": "IREPNOD",
+          "mainAccount": "7632"
+        },
+        {
+          "accountCode": "LAUNDRY",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "LUGGALL",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "MEALS",
+          "mainAccount": "5833"
+        },
+        {
+          "accountCode": "METRO",
+          "mainAccount": "5812"
+        },
+        {
+          "accountCode": "MILLEAS",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "MILPEOL",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "MILPERS",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "MILPNOT",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "MIPERIN",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "NIGHALL",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "NORCOM",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "NORCOM2",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "NORKMHO",
+          "mainAccount": "7399"
+        },
+        {
+          "accountCode": "OTHERTR",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "OVERALL",
+          "mainAccount": "5831"
+        },
+        {
+          "accountCode": "PARKING",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "PASSENG",
+          "mainAccount": "7331"
+        },
+        {
+          "accountCode": "PUBTRAN",
+          "mainAccount": "5812"
+        },
+        {
+          "accountCode": "QST",
+          "mainAccount": "5811"
+        },
+        {
+          "accountCode": "RENTCAR",
+          "mainAccount": "5821"
+        },
+        {
+          "accountCode": "REP",
+          "mainAccount": "6071"
+        },
+        {
+          "accountCode": "REPDED",
+          "mainAccount": "6072"
+        },
+        {
+          "accountCode": "REPDK",
+          "mainAccount": "6071"
+        },
+        {
+          "accountCode": "REPDOM",
+          "mainAccount": "6071"
+        },
+        {
+          "accountCode": "REPFOR",
+          "mainAccount": "6071"
+        },
+        {
+          "accountCode": "REPNOND",
+          "mainAccount": "6072"
+        },
+        {
+          "accountCode": "REPOTHE",
+          "mainAccount": "6072"
+        },
+        {
+          "accountCode": "RESPUR",
+          "mainAccount": "5833"
+        },
+        {
+          "accountCode": "RUALC",
+          "mainAccount": "7321"
+        },
+        {
+          "accountCode": "TAXI",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "TOLLS",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "TRAOTH",
+          "mainAccount": "5812"
+        },
+        {
+          "accountCode": "VARPOOL",
+          "mainAccount": "5821"
+        },
+        {
+          "accountCode": "VISA",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "VISATE",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "ZZAIR",
+          "mainAccount": "5811"
+        },
+        {
+          "accountCode": "DAYALLOHOME",
+          "mainAccount": "7321"
+        },
+        {
+          "accountCode": "DAYALLOFRGN",
+          "mainAccount": "7323"
+        },
+        {
+          "accountCode": "REC",
+          "mainAccount": "1622"
+        },
+        {
+          "accountCode": "STAFEDU",
+          "mainAccount": "7611"
+        },
+        {
+          "accountCode": "PERSON",
+          "mainAccount": "1622"
+        },
+        {
+          "accountCode": "ADMCOST",
+          "mainAccount": "6499"
+        },
+        {
+          "accountCode": "BECARMA",
+          "mainAccount": "7385"
+        },
+        {
+          "accountCode": "BOOKS",
+          "mainAccount": "6971"
+        },
+        {
+          "accountCode": "BUSIMET",
+          "mainAccount": "7999"
+        },
+        {
+          "accountCode": "CARBEN",
+          "mainAccount": "7385"
+        },
+        {
+          "accountCode": "CARMAIN",
+          "mainAccount": "5612"
+        },
+        {
+          "accountCode": "CLOTHES",
+          "mainAccount": "7384"
+        },
+        {
+          "accountCode": "COMCOM",
+          "mainAccount": "5954"
+        },
+        {
+          "accountCode": "COMCON",
+          "mainAccount": "5954"
+        },
+        {
+          "accountCode": "COMMIN",
+          "mainAccount": "5411"
+        },
+        {
+          "accountCode": "COMMMAT",
+          "mainAccount": "5461"
+        },
+        {
+          "accountCode": "COMPUR",
+          "mainAccount": "6993"
+        },
+        {
+          "accountCode": "CONEQUI",
+          "mainAccount": "5411"
+        },
+        {
+          "accountCode": "CONMAT",
+          "mainAccount": "5461"
+        },
+        {
+          "accountCode": "CONSULT",
+          "mainAccount": "6551"
+        },
+        {
+          "accountCode": "DONISE",
+          "mainAccount": "6991"
+        },
+        {
+          "accountCode": "EDUEXT",
+          "mainAccount": "7611"
+        },
+        {
+          "accountCode": "EDUINT",
+          "mainAccount": "7611"
+        },
+        {
+          "accountCode": "FREESUB",
+          "mainAccount": "7631"
+        },
+        {
+          "accountCode": "GIFT",
+          "mainAccount": "5981"
+        },
+        {
+          "accountCode": "GIFTEX",
+          "mainAccount": "6071"
+        },
+        {
+          "accountCode": "HEACAR",
+          "mainAccount": "7621"
+        },
+        {
+          "accountCode": "HOMLEAV",
+          "mainAccount": "5811"
+        },
+        {
+          "accountCode": "HOUSUB",
+          "mainAccount": "7381"
+        },
+        {
+          "accountCode": "INSTALL",
+          "mainAccount": "7692"
+        },
+        {
+          "accountCode": "INTERNE",
+          "mainAccount": "6231"
+        },
+        {
+          "accountCode": "ITSOFT",
+          "mainAccount": "5421"
+        },
+        {
+          "accountCode": "ITVARIA",
+          "mainAccount": "6611"
+        },
+        {
+          "accountCode": "LEGAL",
+          "mainAccount": "6581"
+        },
+        {
+          "accountCode": "LOWVALU",
+          "mainAccount": "5411"
+        },
+        {
+          "accountCode": "MAGIZIN",
+          "mainAccount": "6971"
+        },
+        {
+          "accountCode": "MEDEXP",
+          "mainAccount": "7621"
+        },
+        {
+          "accountCode": "MEMBFEE",
+          "mainAccount": "6971"
+        },
+        {
+          "accountCode": "MOBILE",
+          "mainAccount": "6213"
+        },
+        {
+          "accountCode": "MOBPACK",
+          "mainAccount": "7692"
+        },
+        {
+          "accountCode": "OFFADM",
+          "mainAccount": "6111"
+        },
+        {
+          "accountCode": "OFFREP",
+          "mainAccount": "5522"
+        },
+        {
+          "accountCode": "OFFSUP",
+          "mainAccount": "6111"
+        },
+        {
+          "accountCode": "OTCOST",
+          "mainAccount": "7699"
+        },
+        {
+          "accountCode": "OTHEBEN",
+          "mainAccount": "7399"
+        },
+        {
+          "accountCode": "OTHERCC",
+          "mainAccount": "5611"
+        },
+        {
+          "accountCode": "OTHERMC",
+          "mainAccount": "5999"
+        },
+        {
+          "accountCode": "OTHEROP",
+          "mainAccount": "7999"
+        },
+        {
+          "accountCode": "OTHERPC",
+          "mainAccount": "5611"
+        },
+        {
+          "accountCode": "OTHERPE",
+          "mainAccount": "7699"
+        },
+        {
+          "accountCode": "OTHPS",
+          "mainAccount": "6599"
+        },
+        {
+          "accountCode": "OTHREMA",
+          "mainAccount": "5599"
+        },
+        {
+          "accountCode": "OTHSER",
+          "mainAccount": "6599"
+        },
+        {
+          "accountCode": "PHONE",
+          "mainAccount": "6211"
+        },
+        {
+          "accountCode": "POSTAGE",
+          "mainAccount": "6251"
+        },
+        {
+          "accountCode": "RECRUIT",
+          "mainAccount": "7691"
+        },
+        {
+          "accountCode": "REFROG",
+          "mainAccount": "7631"
+        },
+        {
+          "accountCode": "RELOC",
+          "mainAccount": "7692"
+        },
+        {
+          "accountCode": "RESPEM",
+          "mainAccount": "7699"
+        },
+        {
+          "accountCode": "SAMPLES",
+          "mainAccount": "5961"
+        },
+        {
+          "accountCode": "STAFCAT",
+          "mainAccount": "7631"
+        },
+        {
+          "accountCode": "STAFDEV",
+          "mainAccount": "7611"
+        },
+        {
+          "accountCode": "STAFFEN",
+          "mainAccount": "7631"
+        },
+        {
+          "accountCode": "STAFMET",
+          "mainAccount": "7631"
+        },
+        {
+          "accountCode": "STOREA",
+          "mainAccount": "5994"
+        },
+        {
+          "accountCode": "TBEVNTS",
+          "mainAccount": "7632"
+        },
+        {
+          "accountCode": "TBMEALS",
+          "mainAccount": "7632"
+        },
+        {
+          "accountCode": "TELTRVL",
+          "mainAccount": "5899"
+        },
+        {
+          "accountCode": "TRAIALL",
+          "mainAccount": "7321"
+        },
+        {
+          "accountCode": "TSHORE",
+          "mainAccount": "7399"
+        },
+        {
+          "accountCode": "UTILI",
+          "mainAccount": "5399"
+        },
+        {
+          "accountCode": "WORKPL",
+          "mainAccount": "7384"
+        },
+        {
+          "accountCode": "ZZOTPRM",
+          "mainAccount": "6951"
+        },
+        {
+          "accountCode": "MISSINGCODE",
+          "mainAccount": "5899"
+        }
+      ]
+    }
+  ]
+}

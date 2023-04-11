@@ -1,6 +1,8 @@
-﻿using FileUploadService.Models;
+﻿using API.Upload_v2.Validator;
+using FileUploadService.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
 using System;
 using System.Collections.Generic;
@@ -22,24 +24,49 @@ namespace FileUploadService.Process
     {
         private readonly HttpClient _httpClient;
         private readonly MetaInfo _metaInfo;
-        private readonly Vendors _vendors;
-        public FileUploadService(IHttpClientFactory httpClientFactory, MetaInfo metaInfo, Vendors vendors)
+        private readonly IEnumerable<VendorInformation> _vendorsInformation;
+        private readonly SchemaValidator _schemaValidator;
+        private readonly ILogger<FileUploadService> _logger;
+        public FileUploadService(IHttpClientFactory httpClientFactory, MetaInfo metaInfo, IEnumerable<VendorInformation> vendorsInformation
+            , SchemaValidator schemaValidator, ILogger<FileUploadService> logger)
         {
             _httpClient = httpClientFactory.CreateClient("StorageAccount");
             _metaInfo = metaInfo;
-            _vendors = vendors;
+            _vendorsInformation = vendorsInformation;
+            _schemaValidator = schemaValidator;
+            _logger = logger;
         }
 
         public async Task<HttpResponseMessage> UploadFile(string appId, object data, string metaData, CancellationToken cancellationToken)
         {
-
+            _logger.LogInformation("UploadFile Started");
             var appInfo = readAppInformation(appId);
+            if (!string.IsNullOrWhiteSpace(appInfo.Schemaname))
+            {
+                var schemaError = await _schemaValidator.SchemaError(appInfo.Schemaname, data.ToString(), cancellationToken);
+                if (schemaError)
+                {
+                    _logger.LogError("Invalid Schema");
+                    throw new BadHttpRequestException("Invalid Schema");
+                }
+            }
             var fileName = populateFileName(appInfo, metaData);
+            _logger.LogInformation($"Created Filename is {fileName}");
+
             HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Post, $"file?Path={appInfo.containerName}/{fileName}");
             req.Content = new StringContent(data.ToString());
             var response = await _httpClient.SendAsync(req, cancellationToken);
+            var result = await response.Content.ReadAsStringAsync();
 
-            return response;
+            if (response.IsSuccessStatusCode)
+            {
+                return response;
+            }
+            else
+            {
+                throw new Exception("Failed to upload");
+            }
+
         }
 
         private string populateFileName(VendorInformation appInfo, string metaData)
@@ -75,7 +102,7 @@ namespace FileUploadService.Process
 
         private VendorInformation readAppInformation(string appId)
         {
-            var appInfo = _vendors.Vendor.FirstOrDefault(x => string.Equals(x.AppID, appId, StringComparison.OrdinalIgnoreCase));
+            var appInfo = _vendorsInformation.FirstOrDefault(x => string.Equals(x.AppID, appId, StringComparison.OrdinalIgnoreCase));
 
             if (appInfo == null)
             {

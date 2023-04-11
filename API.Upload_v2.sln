@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Upload_v2", "API.Upload_v2\API.Upload_v2.csproj", "{1C9315C5-AFD7-4125-8B59-2934E82D98AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Upload-v2", "API.Upload_v2\API.Upload-v2.csproj", "{1C9315C5-AFD7-4125-8B59-2934E82D98AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

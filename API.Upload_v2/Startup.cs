@@ -12,6 +12,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 using Newtonsoft.Json.Serialization;
+using System.Collections;
+using System.Collections.Generic;
+using API.Upload_v2.Validator;
 
 namespace FileUploadService
 {
@@ -24,11 +27,7 @@ namespace FileUploadService
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        //public void ConfigureServices(IServiceCollection services)
-        //{
-        //    services.AddControllers();
-        //}
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddNewtonsoftJson(options =>
@@ -52,6 +51,8 @@ namespace FileUploadService
             });
 
             services.AddSingleton<MetaInfo>(GetMetaFileInfo().Result);
+            services.AddSingleton<SchemaValidator>();
+
 
             services.AddHttpClient("StorageAccount", (serviceProvider, client) =>
             {
@@ -79,12 +80,12 @@ namespace FileUploadService
             });
         }
 
-        private Vendors GetVendorInformations()
+        private IEnumerable<VendorInformation> GetVendorInformations()
         {
             using (StreamReader r = new StreamReader("VendorInfo.json"))
             {
                 string json = r.ReadToEnd();
-                return JsonConvert.DeserializeObject<Vendors>(json);
+                return JsonConvert.DeserializeObject<IEnumerable<VendorInformation>>(json);
             }
 
         }

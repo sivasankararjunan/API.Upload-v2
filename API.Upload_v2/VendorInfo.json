@@ -1,52 +1,35 @@
-{
-  "Vendor": [
-    {
-      "client": "ICP_test",
-      "appID": "a2a199d174e9",
-      "filenamestructure": "{name}.txt",
-      "containerName": "tests",
-      "schemaname": ""
-    },
+[
+  {
+    "appID": "a2a199d174e9",
+    "filenamestructure": "{name}.txt",
+    "containerName": "tests"
+  },
 
-    {
-      "client": "ICP_test",
-      "appID": "b934a1953262",
-      "filenamestructure": "test_{year}-{month}-{day}.json",
-      "containerName": "tests",
-      "schemaname": "ICPtest.Schema.json"
-    },
-    {
-      "client": "Internal teams",
-      "appID": "c04453a5c7ed",
-      "filenamestructure": "sites_mapping.json",
-      "containerName": "booking-service",
-      "schemaname": "Booking.Service.Schema.json"
-    },
-    {
-      "client": "Internal teams",
-      "appID": "c1e1492b8e4d",
-      "filenamestructure": "accountCodes_mapping.json",
-      "containerName": "expense-claims",
-      "schemaname": "ExpenseClaims.AccountcodeMapping.Schema.json"
-    },
-    {
-      "client": "Internal teams",
-      "appID": "c7377f4cbad8",
-      "filenamestructure": "VATMapping.json",
-      "containerName": "expense-claims",
-      "schemaname": "ExpenseClaims.VATmapping.Schema.json"
-    },
-    {
-      "client": "Jedox",
-      "appID": "e1c6fe087294",
-      "filenamestructure": "FY_{fiscal_year}_{type}.json",
-      "containerName": "jedox/Budgeting",
-      "schemaname": "Jedox.Budget.Schema.json"
-    }
-
-
-
-
-
-  ]
-}
+  {
+    "appID": "b934a1953262",
+    "filenamestructure": "test_{year}-{month}-{day}.json",
+    "containerName": "tests"
+  },
+  {
+    "appID": "c04453a5c7ed",
+    "filenamestructure": "sites_mapping.json",
+    "containerName": "booking-service"
+  },
+  {
+    "appID": "c1e1492b8e4d",
+    "filenamestructure": "accountCodes_mapping.json",
+    "containerName": "expense-claims",
+    "schemaname": "home/AccountcodeMapping.Schema.json"
+  },
+  {
+    "appID": "c7377f4cbad8",
+    "filenamestructure": "VATMapping.json",
+    "containerName": "expense-claims",
+    "schemaname": "home/VATmapping.Schema.json"
+  },
+  {
+    "appID": "e1c6fe087294",
+    "filenamestructure": "FY_{fiscal_year}_{type}.json",
+    "containerName": "jedox/Budgeting"
+  }
+]
