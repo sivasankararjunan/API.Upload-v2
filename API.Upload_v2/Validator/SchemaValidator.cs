@@ -35,7 +35,7 @@ namespace API.Upload_v2.Validator
 
             if (validationError.Any())
             {
-                throw new BadHttpRequestException(validationError.Select(x => new { x.Kind.ToString(), x.Property }).AsJson());
+                throw new BadHttpRequestException(validationError.Select(x => new { Kind = x.Kind.ToString(), x.Property }).AsJson());
             }
         }
     }
