@@ -15,6 +15,9 @@ using Newtonsoft.Json.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using API.Upload_v2.Validator;
+using Microsoft.Extensions.Logging;
+using Microsoft.ApplicationInsights;
+using Microsoft.ApplicationInsights.Extensibility;
 
 namespace FileUploadService
 {
@@ -78,8 +81,9 @@ namespace FileUploadService
                 });
 
             });
-        }
 
+                services.AddApplicationInsightsTelemetry();
+        }
         private IEnumerable<VendorInformation> GetVendorInformations()
         {
             using (StreamReader r = new StreamReader("VendorInfo.json"))

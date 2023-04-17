@@ -83,17 +83,20 @@ namespace FileUploadService.Controllers
                 var data = ReadFile();
                 await _fileUploadService.UploadFile(appID, data, metaData, CancellationToken.None);
 
-                return Ok();
+                return Ok(new { Status = StatusCodes.Status201Created, Message = "File uploaded!" });
             }
             catch (BadHttpRequestException ex)
             {
-                _logger.LogError(ex.Message);
-                return BadRequest(ex.Message);
+                return BadRequest(new
+                {
+                    Status = StatusCodes.Status400BadRequest,
+                    ex.Message
+                });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                return StatusCode(StatusCodes.Status500InternalServerError, "Upload failed");
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Status = StatusCodes.Status500InternalServerError, Message = "Upload failed" });
             }
         }
 
@@ -142,15 +145,16 @@ namespace FileUploadService.Controllers
             try
             {
                 await _fileUploadService.UploadFile(appID, data, metaData, CancellationToken.None);
-                return Ok();
+                return Ok(new { Status = StatusCodes.Status201Created, Message = "File uploaded!" });
             }
             catch (BadHttpRequestException ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(new { Status = StatusCodes.Status400BadRequest, ex.Message });
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Upload failed");
+                _logger.LogError(ex.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Status = StatusCodes.Status500InternalServerError, Message = "Upload failed" });
             }
         }
 

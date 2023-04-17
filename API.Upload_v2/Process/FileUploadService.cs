@@ -43,12 +43,7 @@ namespace FileUploadService.Process
             var appInfo = readAppInformation(appId);
             if (!string.IsNullOrWhiteSpace(appInfo.Schemaname))
             {
-                var schemaError = await _schemaValidator.SchemaError(appInfo.Schemaname, data.ToString(), cancellationToken);
-                if (schemaError)
-                {
-                    _logger.LogError("Invalid Schema");
-                    throw new BadHttpRequestException("Invalid Schema");
-                }
+                await _schemaValidator.SchemaError(appInfo.Schemaname, data.ToString(), cancellationToken);
             }
             var fileName = populateFileName(appInfo, metaData);
             _logger.LogInformation($"Created Filename is {fileName}");
@@ -57,10 +52,15 @@ namespace FileUploadService.Process
             req.Content = new StringContent(data.ToString());
             var response = await _httpClient.SendAsync(req, cancellationToken);
             var result = await response.Content.ReadAsStringAsync();
-
+            _logger.LogInformation($"Response: {result}");
             if (response.IsSuccessStatusCode)
             {
                 return response;
+            }
+            else if (((int)response.StatusCode) == StatusCodes.Status400BadRequest)
+            {
+                var responseMessage = await response.Content.ReadAsStringAsync();
+                throw new BadHttpRequestException(result);
             }
             else
             {

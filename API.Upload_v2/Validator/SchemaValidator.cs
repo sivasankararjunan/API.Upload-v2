@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using API.Upload_v2.Utilities;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Schema;
 using NJsonSchema;
 using System;
@@ -24,15 +27,16 @@ namespace API.Upload_v2.Validator
         /// <param name="Data"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<bool> SchemaError(string ValidatorFile, string Data, CancellationToken cancellationToken)
+        public async Task SchemaError(string ValidatorFile, string Data, CancellationToken cancellationToken)
         {
-            Type type = Type.GetType(ValidatorFile);
-            Activator.CreateInstance(type);
-            var schema = NJsonSchema.JsonSchema.FromType(type);
-            //FromFileAsync(ValidatorFile, cancellationToken);
+            var schema = await NJsonSchema.JsonSchema.FromFileAsync(ValidatorFile, cancellationToken);
             var validationError = schema.Validate(Data);
-            _logger.LogInformation(string.Join(',', Data));
-            return !validationError.Any();
+            _logger.LogInformation($"Schema Validation Error : {JsonConvert.SerializeObject(validationError)}");
+
+            if (validationError.Any())
+            {
+                throw new BadHttpRequestException(validationError.Select(x => new { x.Kind.ToString(), x.Property }).AsJson());
+            }
         }
     }
 }
