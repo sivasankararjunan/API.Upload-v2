@@ -43,7 +43,7 @@ namespace FileUploadService.Process
             var appInfo = readAppInformation(appId);
             if (!string.IsNullOrWhiteSpace(appInfo.Schemaname))
             {
-                await _schemaValidator.SchemaError(appInfo.Schemaname, data.ToString(), cancellationToken);
+                _schemaValidator.SchemaErrorNewtonsoft(appInfo.Schemaname, data.ToString(), cancellationToken);
             }
             var fileName = populateFileName(appInfo, metaData);
             _logger.LogInformation($"Created Filename is {fileName}");

@@ -5,6 +5,7 @@ using Namotion.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
+using NJsonSchema.Validation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,18 +29,14 @@ namespace API.Upload_v2.Validator
         /// <param name="Data"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task SchemaError(string ValidatorFile, string Data, CancellationToken cancellationToken)
+        public async Task SchemaErrorNJson(string ValidatorFile, string Data, CancellationToken cancellationToken)
         {
             var schema = await NJsonSchema.JsonSchema.FromFileAsync(ValidatorFile, cancellationToken);
-            DateTime dt = DateTime.Now;
             var validationError = schema.Validate(Data);
-            DateTime dt1 = DateTime.Now;
-            _logger.LogInformation($"Schema Validation Error : {JsonConvert.SerializeObject(validationError)}");
 
-            var response = await SchemaError1(ValidatorFile, Data, cancellationToken);
-            DateTime dt2 = DateTime.Now;
             if (validationError.Any())
             {
+                _logger.LogInformation($"Schema Validation Error : {JsonConvert.SerializeObject(validationError)}");
                 throw new BadHttpRequestException(validationError.Select(x => new { Kind = x.Kind.ToString(), x.Property }).AsJson());
             }
         }
@@ -51,13 +48,17 @@ namespace API.Upload_v2.Validator
         /// <param name="Data"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<IList<string>> SchemaError1(string ValidatorFile, string Data, CancellationToken cancellationToken)
+        public void SchemaErrorNewtonsoft(string ValidatorFile, string Data, CancellationToken cancellationToken)
         {
             var schema = JSchema.Parse(File.ReadAllText(ValidatorFile));
             var dataObject = JObject.Parse(Data);
-            IList<string> str = new List<string>();
-            var resx = dataObject.IsValid(schema, out str);
-            return str;
+            IList<string> validationError = new List<string>();
+            var resx = dataObject.IsValid(schema, out validationError);
+            if (!resx)
+            {
+                _logger.LogInformation($"Schema Validation Error : {JsonConvert.SerializeObject(validationError)}");
+                throw new BadHttpRequestException(validationError.AsJson());
+            }
         }
 
         //public string SchemaError2(string ValidatorFile, string Data)
