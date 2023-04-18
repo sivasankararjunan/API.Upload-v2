@@ -82,7 +82,7 @@ namespace FileUploadService
 
             });
 
-                services.AddApplicationInsightsTelemetry();
+            services.AddApplicationInsightsTelemetry();
         }
         private IEnumerable<VendorInformation> GetVendorInformations()
         {
@@ -110,15 +110,19 @@ namespace FileUploadService
         private async Task<string> LoadAccountKey(MetaInfo metaInfo)
         {
 
+            HttpClient client;
 
-#if DEBUG
-            HttpClientHandler clientHandler = new HttpClientHandler();
-            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-            HttpClient client = new HttpClient(clientHandler);
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
+            {
 
-#else
-                HttpClient client = new HttpClient();
-#endif
+                HttpClientHandler clientHandler = new HttpClientHandler();
+                clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+                client = new HttpClient(clientHandler);
+            }
+            else
+            {
+                client = new HttpClient();
+            }
 
 
 
