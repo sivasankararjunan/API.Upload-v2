@@ -8,12 +8,14 @@
   {
     "appID": "b934a1953262",
     "filenamestructure": "test_{year}-{month}-{day}.json",
-    "containerName": "tests"
+    "containerName": "tests",
+    "schemaname": "home/Test.visitation.schema.json"
   },
   {
     "appID": "c04453a5c7ed",
     "filenamestructure": "sites_mapping.json",
-    "containerName": "booking-service"
+    "containerName": "booking-service",
+    "schemaname": "home/Sites_mapping.shema.json"
   },
   {
     "appID": "c1e1492b8e4d",

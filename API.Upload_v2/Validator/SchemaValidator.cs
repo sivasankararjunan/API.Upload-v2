@@ -48,10 +48,10 @@ namespace API.Upload_v2.Validator
         /// <param name="Data"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public void SchemaErrorNewtonsoft(string ValidatorFile, string Data, CancellationToken cancellationToken)
+        public void SchemaErrorNewtonsoft(string ValidatorFile, string Data)
         {
             var schema = JSchema.Parse(File.ReadAllText(ValidatorFile));
-            var dataObject = JObject.Parse(Data);
+            var dataObject = JToken.Parse(Data);
             IList<string> validationError = new List<string>();
             var resx = dataObject.IsValid(schema, out validationError);
             if (!resx)

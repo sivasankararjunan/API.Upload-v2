@@ -27,14 +27,17 @@ namespace FileUploadService.Process
         private readonly IEnumerable<VendorInformation> _vendorsInformation;
         private readonly SchemaValidator _schemaValidator;
         private readonly ILogger<FileUploadService> _logger;
+        private readonly IConfiguration _configuration;
+
         public FileUploadService(IHttpClientFactory httpClientFactory, MetaInfo metaInfo, IEnumerable<VendorInformation> vendorsInformation
-            , SchemaValidator schemaValidator, ILogger<FileUploadService> logger)
+            , SchemaValidator schemaValidator, ILogger<FileUploadService> logger, IConfiguration configuration)
         {
             _httpClient = httpClientFactory.CreateClient("StorageAccount");
             _metaInfo = metaInfo;
             _vendorsInformation = vendorsInformation;
             _schemaValidator = schemaValidator;
             _logger = logger;
+            _configuration = configuration;
         }
 
         public async Task<HttpResponseMessage> UploadFile(string appId, object data, string metaData, CancellationToken cancellationToken)
@@ -43,7 +46,14 @@ namespace FileUploadService.Process
             var appInfo = readAppInformation(appId);
             if (!string.IsNullOrWhiteSpace(appInfo.Schemaname))
             {
-                _schemaValidator.SchemaErrorNewtonsoft(appInfo.Schemaname, data.ToString(), cancellationToken);
+                if (_configuration["SchemaType"] == "NJSON")
+                {
+                    await _schemaValidator.SchemaErrorNJson(appInfo.Schemaname, data.ToString(), cancellationToken);
+                }
+                else
+                {
+                    _schemaValidator.SchemaErrorNewtonsoft(appInfo.Schemaname, data.ToString());
+                }
             }
             var fileName = populateFileName(appInfo, metaData);
             _logger.LogInformation($"Created Filename is {fileName}");
