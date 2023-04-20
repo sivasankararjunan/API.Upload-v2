@@ -1,4 +1,5 @@
-﻿using FileUploadService.Models;
+﻿using API.Upload_v2.Utilities;
+using FileUploadService.Models;
 using FileUploadService.Process;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
@@ -24,22 +25,22 @@ namespace FileUploadService.Controllers
     [Produces("application/json")]
 
     [ApiController]
-    public class FileUploadClientController : ControllerBase
+    public class FileUploadController : ControllerBase
     {
 
-        private readonly ILogger<FileUploadClientController> _logger;
+        private readonly ILogger<FileUploadController> _logger;
         private readonly IConfiguration Config;
-        private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly IFileUploadService _fileUploadService;
-        public FileUploadClientController(ILogger<FileUploadClientController> logger
+        private readonly IHttpUtilities _httpUtilities;
+        public FileUploadController(ILogger<FileUploadController> logger
             , IConfiguration _Config
-            , IWebHostEnvironment webHostEnvironment
-            , IFileUploadService fileUploadService)
+            , IFileUploadService fileUploadService
+            , IHttpUtilities httpUtilities)
         {
             _logger = logger;
             Config = _Config;
-            _webHostEnvironment = webHostEnvironment;
             _fileUploadService = fileUploadService;
+            _httpUtilities = httpUtilities;
         }
         public enum ErrorCode
         {
@@ -80,7 +81,7 @@ namespace FileUploadService.Controllers
             try
             {
                 _logger.Log(LogLevel.Information, "ProcessFileAsync started");
-                var data = ReadFile();
+                var data = _httpUtilities.ReadFile(Request);
                 await _fileUploadService.UploadFile(appID, data, metaData, CancellationToken.None);
 
                 return Ok(new { Status = StatusCodes.Status201Created, Message = "File uploaded!" });
@@ -99,23 +100,6 @@ namespace FileUploadService.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { Status = StatusCodes.Status500InternalServerError, Message = "Upload failed" });
             }
         }
-
-        private object ReadFile()
-        {
-            if (Request.Form.Files == null || !Request.Form.Files.Any())
-            {
-                throw new BadHttpRequestException("No file content.");
-            }
-
-            using (var stream = Request.Form.Files.First().OpenReadStream())
-            {
-                using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
-                {
-                    return reader.ReadToEnd();
-                }
-            }
-        }
-
 
 
         /// <summary>

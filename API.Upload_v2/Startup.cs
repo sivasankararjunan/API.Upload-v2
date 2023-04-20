@@ -18,6 +18,7 @@ using API.Upload_v2.Validator;
 using Microsoft.Extensions.Logging;
 using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.Extensibility;
+using API.Upload_v2.Utilities;
 
 namespace FileUploadService
 {
@@ -55,6 +56,7 @@ namespace FileUploadService
 
             services.AddSingleton<MetaInfo>(GetMetaFileInfo().Result);
             services.AddSingleton<SchemaValidator>();
+            services.AddSingleton<IHttpUtilities, HttpUtilities>();
 
 
             services.AddHttpClient("StorageAccount", (serviceProvider, client) =>

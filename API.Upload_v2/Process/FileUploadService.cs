@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
+using NJsonSchema.Generation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,18 +45,20 @@ namespace FileUploadService.Process
         {
             _logger.LogInformation("UploadFile Started");
             var appInfo = readAppInformation(appId);
-            if (!string.IsNullOrWhiteSpace(appInfo.Schemaname))
+
+            string schemaName;
+            var fileName = populateFileName(appInfo, metaData, out schemaName);
+            if (!string.IsNullOrWhiteSpace(schemaName))
             {
                 if (_configuration["SchemaType"] == "NJSON")
                 {
-                    await _schemaValidator.SchemaErrorNJson(appInfo.Schemaname, data.ToString(), cancellationToken);
+                    await _schemaValidator.SchemaErrorNJson(schemaName, data.ToString(), cancellationToken);
                 }
                 else
                 {
-                    _schemaValidator.SchemaErrorNewtonsoft(appInfo.Schemaname, data.ToString());
+                    _schemaValidator.SchemaErrorNewtonsoft(schemaName, data.ToString());
                 }
             }
-            var fileName = populateFileName(appInfo, metaData);
             _logger.LogInformation($"Created Filename is {fileName}");
 
             HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Post, $"file?Path={appInfo.containerName}/{fileName}");
@@ -79,8 +82,10 @@ namespace FileUploadService.Process
 
         }
 
-        private string populateFileName(VendorInformation appInfo, string metaData)
+        private string populateFileName(VendorInformation appInfo, string metaData, out string schemaName)
         {
+            schemaName = appInfo.Schemaname;
+
             if (!string.IsNullOrWhiteSpace(metaData))
             {
                 try
@@ -98,6 +103,10 @@ namespace FileUploadService.Process
                     foreach (var x in fileNameInfo)
                     {
                         fileName = fileName.Replace("{" + x.Key + "}", x.Value);
+                        if (!string.IsNullOrEmpty(schemaName))
+                        {
+                            schemaName = schemaName.Replace("{" + x.Key + "}", x.Value);
+                        }
                     }
                     return fileName;
 

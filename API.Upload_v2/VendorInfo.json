@@ -32,6 +32,7 @@
   {
     "appID": "e1c6fe087294",
     "filenamestructure": "FY_{fiscal_year}_{type}.json",
-    "containerName": "jedox/Budgeting"
+    "containerName": "jedox/Budgeting",
+    "schemaname": "home/{type}.schema.json"
   }
 ]
