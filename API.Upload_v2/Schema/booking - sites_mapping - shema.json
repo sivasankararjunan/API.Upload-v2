@@ -1,0 +1,39 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "Booking sites mapping schema",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"mp_id": {
+				"type": "string"
+			},
+			"mp_name": {
+				"type": "string"
+			},
+			"api_key": {
+				"type": "string"
+			},
+			"sites": {
+				"type": "array",
+				"items": {
+					"$ref": "#/$defs/site"
+				}
+			}
+		}
+	},
+	"$defs": {
+		"site": {
+			"type": "object",
+			"properties": {
+				"site_id": {
+					"type": "integer"
+				},
+				"type": {
+					"type": "string",
+					"enum": ["event", "room", "service", "space"]
+				}
+			}
+		}
+	}
+}
