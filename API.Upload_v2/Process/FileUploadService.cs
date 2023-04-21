@@ -26,12 +26,12 @@ namespace FileUploadService.Process
         private readonly HttpClient _httpClient;
         private readonly MetaInfo _metaInfo;
         private readonly IEnumerable<VendorInformation> _vendorsInformation;
-        private readonly SchemaValidator _schemaValidator;
+        private readonly ISchemaValidator _schemaValidator;
         private readonly ILogger<FileUploadService> _logger;
         private readonly IConfiguration _configuration;
 
         public FileUploadService(IHttpClientFactory httpClientFactory, MetaInfo metaInfo, IEnumerable<VendorInformation> vendorsInformation
-            , SchemaValidator schemaValidator, ILogger<FileUploadService> logger, IConfiguration configuration)
+            , ISchemaValidator schemaValidator, ILogger<FileUploadService> logger, IConfiguration configuration)
         {
             _httpClient = httpClientFactory.CreateClient("StorageAccount");
             _metaInfo = metaInfo;

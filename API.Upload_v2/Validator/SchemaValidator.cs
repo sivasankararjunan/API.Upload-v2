@@ -15,7 +15,12 @@ using System.Threading.Tasks;
 
 namespace API.Upload_v2.Validator
 {
-    public class SchemaValidator
+    public interface ISchemaValidator
+    {
+        Task SchemaErrorNJson(string ValidatorFile, string Data, CancellationToken cancellationToken);
+        void SchemaErrorNewtonsoft(string ValidatorFile, string Data);
+    }
+    public class SchemaValidator : ISchemaValidator
     {
         private readonly ILogger<SchemaValidator> _logger;
         public SchemaValidator(ILogger<SchemaValidator> logger)

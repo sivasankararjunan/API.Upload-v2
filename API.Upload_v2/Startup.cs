@@ -72,6 +72,7 @@ namespace FileUploadService
 
 
             services.AddSingleton<IFileUploadService, Process.FileUploadService>();
+            services.AddSingleton<ISchemaValidator, SchemaValidator>();
 
             services.AddSwaggerGen(options =>
             {
