@@ -85,14 +85,14 @@ namespace FileUploadService.Process
         private string populateFileName(VendorInformation appInfo, string metaData, out string schemaName)
         {
             schemaName = appInfo.Schemaname;
-
+            Regex rgX = new Regex(@"{([^{}]+)}");
+            var placeHolders = rgX.Matches(appInfo.Filenamestructure).Select(x => x.Groups[1].Value);
             if (!string.IsNullOrWhiteSpace(metaData))
             {
                 try
                 {
                     var fileName = appInfo.Filenamestructure;
-                    Regex rgX = new Regex(@"{([^{}]+)}");
-                    var placeHolders = rgX.Matches(appInfo.Filenamestructure).Select(x => x.Groups[1].Value);
+
                     var fileNameInfo = metaData.Split(',').Select(x => x.Split('=')).Where(x => x.Count() == 2
                     && placeHolders.Contains(x[0]))
                         .GroupBy(x => x[0]).Select(x => new { x.Key, Value = x.Select(y => y[1]).First() });
@@ -115,6 +115,10 @@ namespace FileUploadService.Process
                 {
                     throw new BadHttpRequestException("Invalid MetaData");
                 }
+            }
+            else if (placeHolders.Any())
+            {
+                throw new BadHttpRequestException("Missing MetaData");
             }
             return appInfo.Filenamestructure;
         }

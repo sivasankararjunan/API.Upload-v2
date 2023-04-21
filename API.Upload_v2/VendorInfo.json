@@ -9,7 +9,7 @@
     "appID": "b934a1953262",
     "filenamestructure": "test_{year}-{month}-{day}.json",
     "containerName": "tests",
-    "schemaname": "home/Test.visitation.schema.json"
+    "schemaname": "home/test.visitation.schema.json"
   },
   {
     "appID": "c04453a5c7ed",
@@ -33,6 +33,6 @@
     "appID": "e1c6fe087294",
     "filenamestructure": "FY_{fiscal_year}_{type}.json",
     "containerName": "jedox/Budgeting",
-    "schemaname": "home/{type}.schema.json"
+    "schemaname": "home/Jedox.{type}.Schema.json"
   }
 ]
