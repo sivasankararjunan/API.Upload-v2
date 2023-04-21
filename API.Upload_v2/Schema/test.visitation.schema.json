@@ -1,0 +1,57 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "Donuts schema",
+	"type": "object",
+	"properties": {
+		"total_visits": {
+			"type": "integer"
+		},
+		"countries": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"$ref": "#/$defs/Country"
+			}
+		}
+	},
+	"required": ["total_visits", "countries"],
+	"$defs": {
+		"Country": {
+			"type": "object",
+			"properties": {
+				"code": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"visits": {
+					"type": "integer"
+				},
+				"meeting_places": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"$ref": "#/$defs/MeetingPlace"
+					}
+				}
+			},
+			"required": ["code", "name", "visits", "meeting_places"],
+		},
+		"MeetingPlace": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"visits": {
+					"type": "integer"
+				}
+			},
+			"required": ["id", "name", "visits"],
+		}
+	}
+}
