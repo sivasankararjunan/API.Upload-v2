@@ -2,7 +2,7 @@
   {
     "appID": "a2a199d174e9",
     "filenamestructure": "{name}.txt",
-    "containerName": "tests"
+    "containerName": "uploadstorage/tests"
   },
 
   {
@@ -14,25 +14,25 @@
   {
     "appID": "c04453a5c7ed",
     "filenamestructure": "sites_mapping.json",
-    "containerName": "booking-service",
+    "containerName": "uploadstorage/booking-service",
     "schemaname": "home/Sites_mapping.shema.json"
   },
   {
     "appID": "c1e1492b8e4d",
     "filenamestructure": "accountCodes_mapping.json",
-    "containerName": "expense-claims",
+    "containerName": "uploadstorage/expense-claims",
     "schemaname": "home/AccountcodeMapping.Schema.json"
   },
   {
     "appID": "c7377f4cbad8",
     "filenamestructure": "VATMapping.json",
-    "containerName": "expense-claims",
+    "containerName": "uploadstorage/expense-claims",
     "schemaname": "home/VATmapping.Schema.json"
   },
   {
     "appID": "e1c6fe087294",
     "filenamestructure": "FY_{fiscal_year}_{type}.json",
-    "containerName": "jedox/Budgeting",
+    "containerName": "uploadstorage/jedox/Budgeting",
     "schemaname": "home/Jedox.{type}.Schema.json"
   }
 ]
