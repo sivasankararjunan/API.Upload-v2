@@ -8,7 +8,7 @@
   {
     "appID": "b934a1953262",
     "filenamestructure": "test_{year}-{month}-{day}.json",
-    "containerName": "tests",
+    "containerName": "uploadstorage/tests",
     "schemaname": "home/test.visitation.schema.json"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "appID": "e1c6fe087294",
-    "filenamestructure": "FY_{fiscal_year}_{type}.json",
+    "filenamestructure": "FY_{fiscal_year}_{type}_{count}.json",
     "containerName": "uploadstorage/jedox/Budgeting",
     "schemaname": "home/Jedox.{type}.Schema.json"
   }

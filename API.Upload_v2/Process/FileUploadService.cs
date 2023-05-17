@@ -93,12 +93,15 @@ namespace FileUploadService.Process
                 {
                     var fileName = appInfo.Filenamestructure;
 
-                    var fileNameInfo = metaData.Split(',').Select(x => x.Split('=')).Where(x => x.Count() == 2
+                    var fileNameInfo = metaData.Split(',').Select(x => x.Split(':')).Where(x => x.Count() == 2
                     && placeHolders.Contains(x[0]))
                         .GroupBy(x => x[0]).Select(x => new { x.Key, Value = x.Select(y => y[1]).First() });
-                    if (placeHolders.Count() != fileNameInfo.Count())
+
+                    var missingMetaData = placeHolders.Where(x => !fileNameInfo.Any(y => y.Key == x));
+
+                    if (missingMetaData.Any())
                     {
-                        throw new BadHttpRequestException("Missing MetaData");
+                        throw new BadHttpRequestException($"Missing metadata parameter: {string.Join(',', missingMetaData)}.");
                     }
                     foreach (var x in fileNameInfo)
                     {
