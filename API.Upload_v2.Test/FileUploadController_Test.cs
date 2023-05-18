@@ -65,7 +65,7 @@ namespace API.Upload_v2.Test
             Assert.IsType<BadRequestObjectResult>(response);
         }
         [Theory]
-        [InlineData("", "", "")]
+        [InlineData("", "", "{Test}")]
         public async Task ProcessDataAsync_500Error(string appId, string metaData, string data)
         {
             fileUploadService.Setup(x => x.UploadFile(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<string>(), It.IsAny<CancellationToken>())).Throws(new Exception(""));
@@ -74,12 +74,20 @@ namespace API.Upload_v2.Test
             Assert.Equal(((ObjectResult)response).StatusCode, (int)HttpStatusCode.InternalServerError);
         }
         [Theory]
-        [InlineData("", "", "")]
+        [InlineData("", "", "{Test}")]
         public async Task ProcessDataAsync_Success(string appId, string metaData, string data)
         {
             fileUploadService.Setup(x => x.UploadFile(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<string>(), It.IsAny<CancellationToken>())).Returns(async () => new HttpResponseMessage());
             var response = await fileUploadController.processDataAsync(appId, metaData, data);
             Assert.IsType<OkObjectResult>(response);
+        }
+        [Theory]
+        [InlineData("", "", "")]
+        public async Task ProcessDataAsync_EmptyBody(string appId, string metaData, string data)
+        {
+            fileUploadService.Setup(x => x.UploadFile(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<string>(), It.IsAny<CancellationToken>())).Returns(async () => new HttpResponseMessage());
+            var response = await fileUploadController.processDataAsync(appId, metaData, data);
+            Assert.IsType<BadRequestObjectResult>(response);
         }
     }
 }
