@@ -37,12 +37,12 @@ namespace API.Upload_v2.Validator
         public async Task SchemaErrorNJson(string ValidatorFile, string Data, CancellationToken cancellationToken)
         {
             var schema = await NJsonSchema.JsonSchema.FromFileAsync(ValidatorFile, cancellationToken);
-            var validationError = schema.Validate(Data);
+            ICollection<NJsonSchema.Validation.ValidationError> validationError = schema.Validate(Data);
 
             if (validationError.Any())
             {
                 _logger.LogInformation($"Schema Validation Error : {JsonConvert.SerializeObject(validationError)}");
-                throw new BadHttpRequestException(validationError.Select(x => new { Kind = x.Kind.ToString(), x.Property }).AsJson());
+                throw new BadHttpRequestException(string.Join(',', validationError.Select(x => Enum.GetName(typeof(ValidationErrorKind), x.Kind))));
             }
         }
 

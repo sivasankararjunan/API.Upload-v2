@@ -116,7 +116,7 @@ namespace FileUploadService.Process
                 }
                 catch (Exception ex)
                 {
-                    throw new BadHttpRequestException("Invalid MetaData");
+                    throw new BadHttpRequestException(ex.Message);
                 }
             }
             else if (placeHolders.Any())

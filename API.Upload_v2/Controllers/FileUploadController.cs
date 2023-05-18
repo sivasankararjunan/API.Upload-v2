@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -84,20 +85,20 @@ namespace FileUploadService.Controllers
                 var data = _httpUtilities.ReadFile(Request);
                 await _fileUploadService.UploadFile(appID, data, metaData, CancellationToken.None);
 
-                return Ok(new { Status = StatusCodes.Status201Created, Message = "File uploaded!" });
+                return Ok(new { Status_code = StatusCodes.Status201Created, Message = "File uploaded!" });
             }
             catch (BadHttpRequestException ex)
             {
                 return BadRequest(new
                 {
-                    Status = StatusCodes.Status400BadRequest,
+                    Status_code = StatusCodes.Status400BadRequest,
                     ex.Message
                 });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                return StatusCode(StatusCodes.Status500InternalServerError, new { Status = StatusCodes.Status500InternalServerError, Message = "Upload failed" });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Status_code = StatusCodes.Status500InternalServerError, Message = "Upload failed" });
             }
         }
 
@@ -124,21 +125,25 @@ namespace FileUploadService.Controllers
             Description = "Upload an application-specific file to Ingka Centres")]
         public async Task<IActionResult> processDataAsync([FromRoute, SwaggerParameter("The ID of the application uploading the file.", Required = true)] string appID,
             [FromQuery, SwaggerParameter("The file metadata, used in the data processing logic.")] string metaData,
-            [FromBody, SwaggerRequestBody("data")] object data)
+            [FromBody(EmptyBodyBehavior = EmptyBodyBehavior.Allow), SwaggerRequestBody("data")] object data)
         {
+            if (data is null || string.IsNullOrWhiteSpace(Convert.ToString(data)))
+            {
+                return BadRequest(new { Status_code = StatusCodes.Status400BadRequest, Message = "A non-empty request body is required." });
+            }
             try
             {
                 await _fileUploadService.UploadFile(appID, data, metaData, CancellationToken.None);
-                return Ok(new { Status = StatusCodes.Status201Created, Message = "File uploaded!" });
+                return Ok(new { Status_code = StatusCodes.Status201Created, Message = "File uploaded!" });
             }
             catch (BadHttpRequestException ex)
             {
-                return BadRequest(new { Status = StatusCodes.Status400BadRequest, ex.Message });
+                return BadRequest(new { Status_code = StatusCodes.Status400BadRequest, ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                return StatusCode(StatusCodes.Status500InternalServerError, new { Status = StatusCodes.Status500InternalServerError, Message = "Upload failed" });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Status_code = StatusCodes.Status500InternalServerError, Message = "Upload failed" });
             }
         }
 
