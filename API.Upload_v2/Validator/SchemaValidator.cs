@@ -8,8 +8,11 @@ using Newtonsoft.Json.Schema;
 using NJsonSchema.Validation;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -42,8 +45,14 @@ namespace API.Upload_v2.Validator
             if (validationError.Any())
             {
                 _logger.LogInformation($"Schema Validation Error : {JsonConvert.SerializeObject(validationError)}");
-                throw new BadHttpRequestException(string.Join(',', validationError.Select(x => Enum.GetName(typeof(ValidationErrorKind), x.Kind))));
+                throw new BadHttpRequestException(PopulateErrorMessage(validationError));
             }
+        }
+
+        private string PopulateErrorMessage(ICollection<NJsonSchema.Validation.ValidationError> validationErrors)
+        {
+
+            return validationErrors.Select(x => new { Kind = Enum.GetName(typeof(ValidationErrorKind), x.Kind), x.Property }).AsJson();
         }
 
         /// <summary>
