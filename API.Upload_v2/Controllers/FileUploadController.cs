@@ -1,4 +1,5 @@
 ﻿using API.Upload_v2.Utilities;
+using API.Upload_v2.Validator;
 using FileUploadService.Models;
 using FileUploadService.Process;
 using Microsoft.AspNetCore.Cors;
@@ -133,6 +134,7 @@ namespace FileUploadService.Controllers
             }
             try
             {
+                SchemaValidator.ValidateJson(data);
                 await _fileUploadService.UploadFile(appID, data, metaData, CancellationToken.None);
                 return Ok(new { Status_code = StatusCodes.Status201Created, Message = "File uploaded!" });
             }

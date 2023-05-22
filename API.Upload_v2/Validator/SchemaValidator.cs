@@ -13,6 +13,7 @@ using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -47,6 +48,19 @@ namespace API.Upload_v2.Validator
                 _logger.LogInformation($"Schema Validation Error : {JsonConvert.SerializeObject(validationError)}");
                 throw new BadHttpRequestException(PopulateErrorMessage(validationError));
             }
+        }
+
+        public static void ValidateJson(object data)
+        {
+            try
+            {
+                JToken.Parse(Convert.ToString(data));
+            }
+            catch (Exception ex)
+            {
+                throw new BadHttpRequestException("Invalid Content");
+            }
+
         }
 
         private string PopulateErrorMessage(ICollection<NJsonSchema.Validation.ValidationError> validationErrors)
