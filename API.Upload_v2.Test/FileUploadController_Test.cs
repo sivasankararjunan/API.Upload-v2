@@ -65,7 +65,7 @@ namespace API.Upload_v2.Test
             Assert.IsType<BadRequestObjectResult>(response);
         }
         [Theory]
-        [InlineData("", "", "{Test}")]
+        [InlineData("", "", "{Test:'test'}")]
         public async Task ProcessDataAsync_400InvalidContent(string appId, string metaData, string data)
         {
             fileUploadService.Setup(x => x.UploadFile(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<string>(), It.IsAny<CancellationToken>())).Throws(new Exception(""));
