@@ -31,7 +31,8 @@
   },
   {
     "appID": "e1c6fe087294",
-    "filenamestructure": "FY_{fiscal_year}_{type}_{count}.json",
+    "types": [ "estimate", "budget" ],
+    "filenamestructure": "FY_{fiscalyear}_{type}_{count}.json, FY_{fiscalyear}_{type}.json",
     "containerName": "uploadstorage/jedox/Budgeting",
     "schemaname": "home/Jedox.{type}.Schema.json"
   }

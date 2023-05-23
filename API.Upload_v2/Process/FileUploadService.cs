@@ -86,16 +86,42 @@ namespace FileUploadService.Process
         {
             schemaName = appInfo.Schemaname;
             Regex rgX = new Regex(@"{([^{}]+)}");
+
             var placeHolders = rgX.Matches(appInfo.Filenamestructure).Select(x => x.Groups[1].Value);
             if (!string.IsNullOrWhiteSpace(metaData))
             {
                 try
                 {
                     var fileName = appInfo.Filenamestructure;
-
                     var fileNameInfo = metaData.Split(',').Select(x => x.Split(':')).Where(x => x.Count() == 2
                     && placeHolders.Contains(x[0]))
                         .GroupBy(x => x[0]).Select(x => new { x.Key, Value = x.Select(y => y[1]).First() });
+
+                    if (appInfo.Types != null && appInfo.Types.Any())
+                    {
+                        var type = fileNameInfo.FirstOrDefault(x => x.Key == "type");
+                        if (type == null)
+                        {
+                            throw new BadHttpRequestException($"Missing metadata parameter: type.");
+                        }
+                        var index = -1;
+                        for (var i = 0; i < appInfo.Types.Length; i++)
+                        {
+                            if (appInfo.Types[i] == type.Value)
+                            {
+                                index = i; break;
+                            }
+                        }
+                        if (index == -1)
+                        {
+                            throw new BadHttpRequestException($"Invalid metadata value: type.");
+                        }
+                        fileName = appInfo.FileNameStructures[index];
+                        placeHolders = rgX.Matches(fileName).Select(x => x.Groups[1].Value);
+                    }
+
+
+
 
                     var missingMetaData = placeHolders.Where(x => !fileNameInfo.Any(y => y.Key == x));
 
