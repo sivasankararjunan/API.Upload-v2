@@ -147,7 +147,7 @@ namespace FileUploadService.Process
             }
             else if (placeHolders.Any())
             {
-                throw new BadHttpRequestException("Missing MetaData");
+                throw new BadHttpRequestException($"Missing metadata parameter: {string.Join(',', placeHolders)}");
             }
             return appInfo.Filenamestructure;
         }
