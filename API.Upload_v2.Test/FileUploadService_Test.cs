@@ -39,7 +39,7 @@ namespace API.Upload_v2.Test
 
         [Theory]
         [InlineData("1", "year:2023", "")]
-        [InlineData("1", "year:2023", "")]
+        [InlineData("1", "", "")]
         public async Task ProcessDataAsync_Success_FileNameStructure(string appId, string metaData, string data)
         {
             var vendorInformation = new List<VendorInformation>() {
