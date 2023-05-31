@@ -38,6 +38,33 @@ namespace API.Upload_v2.Test
         }
 
         [Theory]
+        [InlineData("1", "year:2023", "")]
+        [InlineData("1", "year:2023", "")]
+        public async Task ProcessDataAsync_Success_FileNameStructure(string appId, string metaData, string data)
+        {
+            var vendorInformation = new List<VendorInformation>() {
+            new VendorInformation{ AppID="1",containerName="Container",Filenamestructure="FileNameStructure_{year}", Schemaname="SchemaName" }
+            };
+            httpClientFactory.Setup(x => x.CreateClient(It.IsAny<string>())).Returns(httpClient.Object);
+            var _fileUploadService = new _FileUploadService(httpClientFactory.Object,
+                new MetaInfo(), vendorInformation, schemaValidator.Object, logger.Object, configuration.Object);
+
+            httpClient.Setup(x => x.SendAsync(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>())).Returns(async () => new HttpResponseMessage(HttpStatusCode.Created));
+            configuration.Setup(x => x["SchemaType"]).Returns("NJSON");
+            if (!string.IsNullOrEmpty(metaData))
+            {
+                var response = await _fileUploadService.UploadFile(appId, data, metaData, new CancellationToken());
+                Assert.IsType<HttpResponseMessage>(response);
+                Assert.Equal(response.StatusCode, HttpStatusCode.Created);
+            }
+            else
+            {
+                Assert.ThrowsAsync<BadHttpRequestException>(() => _fileUploadService.UploadFile(appId, data, metaData, new CancellationToken()));
+            }
+        }
+
+
+        [Theory]
         [InlineData("1", "", "")]
         public async Task ProcessDataAsync_Success_NJ(string appId, string metaData, string data)
         {
@@ -47,7 +74,6 @@ namespace API.Upload_v2.Test
             Assert.IsType<HttpResponseMessage>(response);
             Assert.Equal(response.StatusCode, HttpStatusCode.Created);
         }
-
 
         [Theory]
         [InlineData("1", "", "")]
